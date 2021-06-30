@@ -4,12 +4,7 @@ import TodoItem from './TodoItem';
 
 
 function TodoContainer() {
-  const [todos, setTodos] = useState([{
-    todoTitle: "Todo Title",
-    todoBody: "Todo Body",
-    id: null,
-    isComplete: false
-  }])
+  const [todos, setTodos] = useState([])
 
   const addTodoToTodos = (event) => {
     event.preventDefault();
@@ -23,10 +18,9 @@ function TodoContainer() {
       id: (Math.random() * 102165657.1323247),
       isComplete: false
     }])
+    
     event.target.querySelector('input#todo__title').value = ""
     event.target.querySelector('textarea#todo__body').value = ""
-
-    console.log(todoBody, todoTitle)
   }
 
   return (

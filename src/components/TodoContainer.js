@@ -11,9 +11,25 @@ function TodoContainer() {
     isComplete: false
   }])
 
+  const addTodoToTodos = (event) => {
+    event.preventDefault();
+
+    const todoTitle = event.target.querySelector('input#todo__title').value;
+    const todoBody = event.target.querySelector('textarea#todo__body').value;
+
+    setTodos([...todos, {
+      todoTitle,
+      todoBody,
+      id: (Math.random() * 102165657.1323247),
+      isComplete: false
+    }])
+    
+    console.log(todoBody, todoTitle)
+  }
+
   return (
     <div>
-      <TodoForm />
+      <TodoForm addTodoToTodos={addTodoToTodos}/>
       <div className="todo__container">
         <ul>
         {todos.map(todo => {

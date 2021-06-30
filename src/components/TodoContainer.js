@@ -23,13 +23,15 @@ function TodoContainer() {
       id: (Math.random() * 102165657.1323247),
       isComplete: false
     }])
-    
+    event.target.querySelector('input#todo__title').value = ""
+    event.target.querySelector('textarea#todo__body').value = ""
+
     console.log(todoBody, todoTitle)
   }
 
   return (
     <div>
-      <TodoForm addTodoToTodos={addTodoToTodos}/>
+      <TodoForm addTodoToTodos={addTodoToTodos} />
       <div className="todo__container">
         <ul>
         {todos.map(todo => {

@@ -23,6 +23,13 @@ function TodoContainer() {
     event.target.querySelector('textarea#todo__body').value = ""
   }
 
+  const deleteTodo = (id) => {
+    let newTodos = todos.filter(todo => {
+      return todo.id !== id
+    });
+    setTodos([...newTodos])
+  }
+
   return (
     <div>
       <TodoForm addTodoToTodos={addTodoToTodos} />
@@ -30,7 +37,7 @@ function TodoContainer() {
         <ul>
         {todos.map(todo => {
           return <li key={todo.id}>
-            <TodoItem todo={todo}/>
+            <TodoItem todo={todo} deleteTodo={deleteTodo}/>
           </li>
         })}
         </ul>

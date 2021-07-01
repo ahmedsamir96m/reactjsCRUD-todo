@@ -36,7 +36,7 @@ function TodoContainer() {
 
     let newTodos = todos.filter(todo => {
       if (todo.id === id) {
-        todo.todoTitle = editedTitle
+        editedTitle === "" ? todo.todoTitle = "No Title" : todo.todoTitle = editedTitle;
         todo.todoBody = editedBody
         todo.id = id
       }

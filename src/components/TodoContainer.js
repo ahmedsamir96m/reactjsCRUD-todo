@@ -30,6 +30,22 @@ function TodoContainer() {
     setTodos([...newTodos])
   }
 
+  const editTodo = (id) => {
+    const editedTitle = prompt("Edit Title!");
+    const editedBody = prompt("Edit Body!");
+
+    let newTodos = todos.filter(todo => {
+      if (todo.id === id) {
+        todo.todoTitle = editedTitle
+        todo.todoBody = editedBody
+        todo.id = id
+      }
+      return todo;
+    });
+
+    setTodos([...newTodos])
+  }
+
   return (
     <div>
       <TodoForm addTodoToTodos={addTodoToTodos} />
@@ -37,7 +53,7 @@ function TodoContainer() {
         <ul>
         {todos.map(todo => {
           return <li key={todo.id}>
-            <TodoItem todo={todo} deleteTodo={deleteTodo}/>
+            <TodoItem todo={todo} deleteTodo={deleteTodo} editTodo={editTodo}/>
           </li>
         })}
         </ul>

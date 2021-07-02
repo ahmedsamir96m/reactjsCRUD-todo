@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;700&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(
+    90deg,
+    #000C66 0%,
+    rgba(48, 16, 255, 1) 100%
+  );;
+  font-family: "Barlow";
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+}
+
+input, textarea {
+  color: #fff
+}
+
+.todo__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  background: #030303;
+  text-align: center;
+  margin: 18px auto;
+  border-radius: 10px;
+  padding: 32px 0;
+}
+
+.todo__form {
+  margin-bottom: 32px;
+}
+
+.todo__title, .todo__body {
+  display: block;
+  margin: 18px auto;
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+}
+
+.todo__title::placeholder, .todo__body::placeholder {
+  color: #e2e2e2;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.todo__button {
+  background: none;
+  outline: none;
+  border-radius: 4px;
+  border: 2px solid #5d5cff;
+  padding: 5px 10px;
+  background: #5d0cff;
+  color: #fff;
+}
+
+.todo__item {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 118, 20, 1) 0%,
+    rgba(255, 84, 17, 1) 100%
+  );
+  padding: 16px;
+  border-radius: 5px;
+  min-width: 320px;
+}
+
+.todo__item-title, .todo__item-body {
+  margin: 8px 0;
+}
+
+.todo__item:nth-child(4n + 1) {
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+}
+
+.todo__item:nth-child(4n + 2) {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 12, 241, 1) 0%,
+    rgba(250, 0, 135, 1) 100%
+  );
+}
+
+.todo__item:nth-child(4n + 3) {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+}
+
+.todo__edit, .todo__delete {
+  margin: 10px 5px;
+}
+
+.todo__icon {
+  width: 14px;
+  color: #fff;
+}
+

@@ -1,10 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import TodoForm from './TodoForm'
 import TodoItem from './TodoItem';
 
 
 function TodoContainer() {
   const [todos, setTodos] = useState([])
+
+  useEffect(() => {
+    const storedTodos = localStorage.getItem("stored-todos");
+    if (storedTodos) setTodos(JSON.parse(storedTodos))
+  }, []);
+  
+  useEffect(() => {
+    localStorage.setItem("stored-todos", JSON.stringify(todos))
+  });
 
   const addTodoToTodos = (event) => {
     event.preventDefault();

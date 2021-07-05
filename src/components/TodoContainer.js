@@ -61,6 +61,7 @@ function TodoContainer() {
 
   return (
     <div>
+      <h1>{todos.length > 0 ? "Check what you have to do today!" : "There's nothing to do yet!"}</h1>
       <TodoForm addTodoToTodos={addTodoToTodos} />
       <div className="todo__container">
         <ul>

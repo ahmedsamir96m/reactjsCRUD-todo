@@ -40,12 +40,14 @@ function TodoContainer() {
   }
 
   const editTodo = (id) => {
-    const editedTitle = prompt("Edit Title!");
-    const editedBody = prompt("Edit Body!");
+    let editedTitle = prompt("Edit Title!");
+    let editedBody = prompt("Edit Body!");
 
     let newTodos = todos.filter(todo => {
       if (todo.id === id) {
-        editedTitle === "" ? todo.todoTitle = "No Title" : todo.todoTitle = editedTitle;
+        if(editedTitle === "") editedTitle = todo.todoTitle
+        if(editedBody === "") editedBody = todo.todoBody
+        todo.todoTitle = editedTitle
         todo.todoBody = editedBody
         todo.id = id
       }

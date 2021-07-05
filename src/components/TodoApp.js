@@ -6,7 +6,7 @@ function TodoApp() {
 
   return (
     <section className="App">
-      <h1>Hello Todo!</h1>
+      <h1>Check what you have to do today!</h1>
       <TodoContainer />
     </section>
   );

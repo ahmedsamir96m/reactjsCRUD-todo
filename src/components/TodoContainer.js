@@ -21,6 +21,8 @@ function TodoContainer() {
     const todoTitle = event.target.querySelector('input#todo__title').value;
     const todoBody = event.target.querySelector('textarea#todo__body').value;
 
+    if(!/\S/.test(todoTitle)) return;
+
     setTodos([...todos, {
       todoTitle,
       todoBody,
@@ -40,12 +42,14 @@ function TodoContainer() {
   }
 
   const editTodo = (id) => {
-    const editedTitle = prompt("Edit Title!");
-    const editedBody = prompt("Edit Body!");
+    let editedTitle = prompt("Edit Title!");
+    let editedBody = prompt("Edit Body!");
 
     let newTodos = todos.filter(todo => {
       if (todo.id === id) {
-        editedTitle === "" ? todo.todoTitle = "No Title" : todo.todoTitle = editedTitle;
+        /\S/.test(editedTitle)? todo.todoTitle = editedTitle : editedTitle = todo.todoTitle;
+        /\S/.test(editedBody)? todo.todoBody = editedBody : editedBody = todo.todoBody;
+        todo.todoTitle = editedTitle
         todo.todoBody = editedBody
         todo.id = id
       }

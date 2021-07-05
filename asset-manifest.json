@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/reactjsCRUD-todo/static/css/main.4484a1a7.chunk.css",
+    "main.js": "/reactjsCRUD-todo/static/js/main.d413094b.chunk.js",
+    "main.js.map": "/reactjsCRUD-todo/static/js/main.d413094b.chunk.js.map",
+    "runtime-main.js": "/reactjsCRUD-todo/static/js/runtime-main.1e3004b2.js",
+    "runtime-main.js.map": "/reactjsCRUD-todo/static/js/runtime-main.1e3004b2.js.map",
+    "static/js/2.57168eb7.chunk.js": "/reactjsCRUD-todo/static/js/2.57168eb7.chunk.js",
+    "static/js/2.57168eb7.chunk.js.map": "/reactjsCRUD-todo/static/js/2.57168eb7.chunk.js.map",
+    "index.html": "/reactjsCRUD-todo/index.html",
+    "static/css/main.4484a1a7.chunk.css.map": "/reactjsCRUD-todo/static/css/main.4484a1a7.chunk.css.map",
+    "static/js/2.57168eb7.chunk.js.LICENSE.txt": "/reactjsCRUD-todo/static/js/2.57168eb7.chunk.js.LICENSE.txt",
+    "static/media/delete-icon.5c224746.svg": "/reactjsCRUD-todo/static/media/delete-icon.5c224746.svg",
+    "static/media/edit-icon.b7180dbb.svg": "/reactjsCRUD-todo/static/media/edit-icon.b7180dbb.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1e3004b2.js",
+    "static/js/2.57168eb7.chunk.js",
+    "static/css/main.4484a1a7.chunk.css",
+    "static/js/main.d413094b.chunk.js"
+  ]
+}

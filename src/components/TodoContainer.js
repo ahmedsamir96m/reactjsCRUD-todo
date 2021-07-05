@@ -21,6 +21,8 @@ function TodoContainer() {
     const todoTitle = event.target.querySelector('input#todo__title').value;
     const todoBody = event.target.querySelector('textarea#todo__body').value;
 
+    if(!/\S/.test(todoTitle)) return;
+
     setTodos([...todos, {
       todoTitle,
       todoBody,
